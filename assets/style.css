@@ -26,7 +26,7 @@ blockquote {padding: 0px 20px;margin: 0 0 20px;border-left: 5px solid #aaa;font-
 /*home*/
 .homeinfo{padding:250px 0 20px 0;}
 .homeinfo .player{margin-top: 70px;position: relative;}
-.homeinfo .player img.graphics{position: absolute;bottom: 167px;right: -24px;}
+.homeinfo .player img.graphics{position: absolute;bottom: 275px;right: -24px;}
 .blockblack{background:rgba(0,0,0,0.8); border-radius: 10px; padding: 25px; }
 .fronttext h2{font-size:60px; line-height:60px;display: inline-block;padding:5px 10px;}
 .fronttext { position: right; }
@@ -99,7 +99,7 @@ button.close{position: absolute;right: 0;background: #FFF;width: 25px;height: 25
 /*contact*/
 
 
-#footer{background-color: #000; padding: 5px 0; color: #fff; font-size: 14px;color: #aaa;margin-top: 50px; z-index: 100;position: relative;}
+#footer{background-color: #000; padding: 5px 0; color: #fff; font-size: 14px;color: #aaa;margin-top: 50px; text-align: center; z-index: 100;position: relative;}
 
 
 /*background slider*/
