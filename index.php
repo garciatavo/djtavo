@@ -70,6 +70,7 @@
 
             </div>
         </div>
+      </div>
         <!-- #Header Starts -->
 
         <!-- overlay -->
@@ -352,7 +353,7 @@
 
                               <a href="#" class="thumbnail"><img src="assets/images/oliverTwist.jpg" class="img-reponsive" alt="Salsa" /></a>
 
-                              <div class="col-lg-8 col-lg-offset-2">                                                                           
+                              <div class="col-lg-8 col-lg-offset-2">
                               <p>FIESTA NIGHT.</p>
                               <p> - Join us Saturday inside Oliver Twist for the our hottest <br>FIESTA NIGHT.</p>
                               <p>Dj Tavo | SALSA | BACHATA | REGGAETON | TOP 40 &amp; MORE.</p>
@@ -378,7 +379,7 @@
 
                               <a href="#" class="thumbnail"><img src="assets/images/party1.jpg" class="img-reponsive" alt="Salsa" /></a>
 
-                              <div class="col-lg-8 col-lg-offset-2">                                                                           
+                              <div class="col-lg-8 col-lg-offset-2">
                               <p>Twisted Salsa.</p>
                               <p>Its Wednesday Night and that means it's time to DANCE!!!.</p>
                               <p>Oliver Twist is the place to be this and every Wednesday to dance, dance, DANCE. Enjoy the best of Salsa, Merengue and Kizomba by DJ TAVO</p>
