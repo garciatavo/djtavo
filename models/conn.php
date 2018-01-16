@@ -9,7 +9,8 @@ $dbname = "myDB";
 // Create Connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// $conn->close();
- $conn->close();
+ ?>
 
-?>
+
+ // $conn->close();
+  $conn->close();

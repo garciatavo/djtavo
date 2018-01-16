@@ -1,3 +1,5 @@
+<?php include('models/conn.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,10 +12,6 @@
 
     <link rel="stylesheet" href="assets/animate.css">
     <link rel="stylesheet" href="assets/style.css">
-
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/jquery-eu-cookie-law-popup.css" />
-    <script src="js/jquery-eu-cookie-law-popup.js"></script>
 
 </head>
 
@@ -41,7 +39,7 @@
                     <div class="container">
                         <div class="navbar-header">
                             <!-- Logo Starts -->
-                            <a class="navbar-brand" href="#home"><img src="assets/images/dj_tavo_logo.png" height="40" alt="logo" /></a>
+                            <a class="navbar-brand" href="#home"><img src="images/dj_tavo_logo.png" height="40" alt="logo" /></a>
                             <!-- #Logo Ends -->
 
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -89,8 +87,8 @@
 
                     <div class="col-sm-5 col-xs-12 col-sm-offset-1">
                         <div class="player">
-                            <img src="assets/images/dj.png" class="graphics hidden-xs  animated fadeInRightBig" alt="dj" />
-                            <iframe width="100%" height="275" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/70560929&amp;color=%23ff9900&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+                            <img src="images/dj.png" class="graphics hidden-xs  animated fadeInRightBig" alt="dj" />
+                            <iframe width="100%" height="275" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/70560929&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
                         </div>
                     </div>
 
@@ -106,7 +104,13 @@
                     <h3><span class="glyphicon glyphicon-user"></span> About Me</h3>
                     <div class="row">
                         <div class="col-lg-4 col-sm-4  col-xs-12">
-                            <img src="assets/images/rsz_tavohome.jpg" class="img-responsive" alt="about" />
+                            <?php
+                              $sql = "SELECT pic FROM images";
+                              $result = $conn->query($sql);
+                              while ($row = $result->fetch_assoc()){
+                                echo '<img src='.$row["pic"].' class="img-responsive" alt="about" />';
+                              }
+                              ?>
                         </div>
                         <div class="col-lg-5 col-sm-8  col-xs-12">
                             <p>Born and rise and Cali-Colombia the world capital of SALSA. I've been Djing since 2000 I started when I was 18 years old working a friend's bar. Since then i started promoting myselft moving up to big club in Philadelphia, New York and New Jersey I moved to Canada in 2008.Been djing in London, Hamilton, Kitchener &amp; Toronto since then.</p>
@@ -124,7 +128,7 @@
                     <h3><span class="glyphicon glyphicon-camera"></span> Photos</h3>
                     <div class="row">
                         <div class="col-sm-3 col-xs-12">
-                            <div class="album"><img src="assets/images/party.jpg" class="img-responsive" alt="music theme" />
+                            <div class="album"><img src="images/party.jpg" class="img-responsive" alt="music theme" />
                                 <div class="albumdetail">
                                     <h5>Oliver Twist</h5>
                                     <!-- <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a> --></div>
@@ -132,7 +136,7 @@
                         </div>
 
                         <div class="col-sm-3 col-xs-12">
-                            <div class="album"><img src="assets/images/twist3.jpg" class="img-responsive" alt="music theme" />
+                            <div class="album"><img src="images/twist3.jpg" class="img-responsive" alt="music theme" />
                                 <div class="albumdetail">
                                     <h5>Oliver Twist</h5>
                                     <!-- <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a> --></div>
@@ -140,7 +144,7 @@
                         </div>
 
                         <div class="col-sm-3 col-xs-12">
-                            <div class="album"><img src="assets/images/party2.jpg" class="img-responsive" alt="music theme" />
+                            <div class="album"><img src="images/party2.jpg" class="img-responsive" alt="music theme" />
                                 <div class="albumdetail">
                                     <h5>Oliver Twist</h5>
                                     <!-- <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a> --></div>
@@ -148,7 +152,7 @@
                         </div>
 
                         <div class="col-sm-3 col-xs-12">
-                            <div class="album"><img src="assets/images/twist2.jpg" class="img-responsive" alt="music theme" />
+                            <div class="album"><img src="images/twist2.jpg" class="img-responsive" alt="music theme" />
                                 <div class="albumdetail">
                                     <h5>Oliver Twist</h5>
                                     <!-- <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a> --></div>
@@ -156,7 +160,7 @@
                         </div>
 
                         <div class="col-sm-3 col-xs-12">
-                            <div class="album"><img src="assets/images/twist1.jpg" class="img-responsive" alt="music theme" />
+                            <div class="album"><img src="images/twist1.jpg" class="img-responsive" alt="music theme" />
                                 <div class="albumdetail">
                                     <h5>Oliver Twist</h5>
                                     <!-- <a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a> --></div>
@@ -164,7 +168,16 @@
                         </div>
 
                         <div class="col-sm-3 col-xs-12">
-                            <div class="album"><img src="assets/images/twist4.jpg" class="img-responsive" alt="music theme" />
+                            <div class="album"><img src="images/twist4.jpg" class="img-responsive" alt="twist" />
+                                <div class="albumdetail">
+                                    <h5>District Night Club</h5>
+                                    <!-- a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a> --></div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-3 col-xs-12">
+                            <div class="album"><img src="images/dis1.jpg" class="img-responsive" alt="music theme" />
                                 <div class="albumdetail">
                                     <h5>District Night Club</h5>
                                     <!-- a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a> --></div>
@@ -172,15 +185,7 @@
                         </div>
 
                         <div class="col-sm-3 col-xs-12">
-                            <div class="album"><img src="assets/images/dis1.jpg" class="img-responsive" alt="music theme" />
-                                <div class="albumdetail">
-                                    <h5>District Night Club</h5>
-                                    <!-- a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a> --></div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-3 col-xs-12">
-                            <div class="album"><img src="assets/images/martinibar.jpg" class="img-responsive" alt="music theme" />
+                            <div class="album"><img src="images/martinibar.jpg" class="img-responsive" alt="music theme" />
                                 <div class="albumdetail">
                                     <h5>Martini Bar</h5>
                                     <!-- a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a> --></div>
@@ -202,7 +207,7 @@
                                     <li>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-3 col-lg-4">
-                                                <a href="#" data-toggle="modal" data-target="#twist"><img src="assets/images/party1.jpg" class="img-responsive" alt="music theme" /></a>
+                                                <a href="#" data-toggle="modal" data-target="#twist"><img src="images/party1.jpg" class="img-responsive" alt="music theme" /></a>
                                             </div>
                                             <div class="col-xs-12  col-sm-6 col-lg-5 ">
                                                 <h5><a href="#" data-toggle="modal" data-target="#twist">Twisted Salsa</a></h5>
@@ -214,7 +219,7 @@
                                     <li>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-3 col-lg-4">
-                                                <a href="1" data-toggle="modal" data-target="#saturday"><img src="assets/images/oliverTwist.jpg" class="img-responsive" alt="music theme" /></a>
+                                                <a href="1" data-toggle="modal" data-target="#saturday"><img src="images/oliverTwist.jpg" class="img-responsive" alt="music theme" /></a>
                                             </div>
                                             <div class="col-xs-12  col-sm-6 col-lg-5 ">
                                                 <h5><a href="#" data-toggle="modal" data-target="#saturday">Latin Party</a></h5>
@@ -226,7 +231,7 @@
                                     <li>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-3 col-lg-4">
-                                                <a href="2" data-toggle="modal" data-target="#blogdetail"><img src="assets/images/gozadera.jpg" class="img-responsive" alt="music theme" /></a>
+                                                <a href="2" data-toggle="modal" data-target="#blogdetail"><img src="images/gozadera.jpg" class="img-responsive" alt="music theme" /></a>
                                             </div>
                                             <div class="col-xs-12  col-sm-6 col-lg-5 ">
                                                 <h5><a href="#" data-toggle="modal" data-target="#blogdetail">La Gozadera</a></h5>
@@ -238,7 +243,7 @@
                                     <li>
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-3 col-lg-4">
-                                                <a href="3" data-toggle="modal" data-target="#blogdetail"><img src="assets/images/fiestalatina2.jpg" class="img-responsive" alt="music theme" /></a>
+                                                <a href="3" data-toggle="modal" data-target="#blogdetail"><img src="images/gozadera.jpg" class="img-responsive" alt="music theme" /></a>
                                             </div>
                                             <div class="col-xs-12  col-sm-6 col-lg-5 ">
                                                 <h5><a href="#" data-toggle="modal" data-target="#blogdetail">Christmas Eve Party</a></h5>
@@ -335,9 +340,9 @@
         <!-- background slider -->
         <div id="myCarousel" class="carousel slide hidden-xs">
             <div class="carousel-inner">
-                <div class="active item"><img src="assets/images/back1.jpg" alt="" /></div>
-                <div class="item"><img src="assets/images/back2.jpg" alt="" /></div>
-                <div class="item"><img src="assets/images/back3.jpg" alt="" /></div>
+                <div class="active item"><img src="images/back1.jpg" alt="" /></div>
+                <div class="item"><img src="images/back2.jpg" alt="" /></div>
+                <div class="item"><img src="images/back3.jpg" alt="" /></div>
             </div>
         </div>
         <!-- background slider -->
@@ -348,10 +353,10 @@
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 
-                    <div class="blog" ="blog">
+                    <div class="blog">
                         <h2>Fiesta Night</h2>
 
-                              <a href="#" class="thumbnail"><img src="assets/images/oliverTwist.jpg" class="img-reponsive" alt="Salsa" /></a>
+                              <a href="#" class="thumbnail"><img src="images/oliverTwist.jpg" class="img-reponsive" alt="Salsa" /></a>
 
                               <div class="col-lg-8 col-lg-offset-2">
                               <p>FIESTA NIGHT.</p>
@@ -374,10 +379,10 @@
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 
-                    <div class="blog" ="blog">
+                    <div class="blog">
                         <h2>Twisted Salsa</h2>
 
-                              <a href="#" class="thumbnail"><img src="assets/images/party1.jpg" class="img-reponsive" alt="Salsa" /></a>
+                              <a href="#" class="thumbnail"><img src="images/party1.jpg" class="img-reponsive" alt="Salsa" /></a>
 
                               <div class="col-lg-8 col-lg-offset-2">
                               <p>Twisted Salsa.</p>
