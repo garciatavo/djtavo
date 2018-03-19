@@ -1,0 +1,294 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    font-size: 15px;
+    background: lightgrey;
+    color: #666;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+.map
+{
+    width: 300px;
+    height: 150px;
+
+    margin-left: calc(50% - 150px);
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.word
+{
+    color: rgba(255,255,255, .21);
+    font-size: 2.1em;
+    font-weight: 700;
+    position: absolute;
+    font-family: 'Consolas';
+}
+
+a
+{
+    color:#666;
+    text-decoration: none;
+}
+.container
+{
+    width: 80%;
+    margin:auto;
+    overflow:auto;
+}
+.container h4
+{
+    text-align: center;
+}
+header
+{
+    background: #333;
+    min-height: 55px;
+    color: #fff;
+}
+header a
+{
+    color:#fff;
+}
+
+.logo
+{
+    float: left;
+    width: 5%;
+    margin-top: 15px;
+    border-radius: 50px;
+    
+}
+
+nav
+{
+    float: right;
+    width: 70%;
+}
+nav ul
+{
+    float: right;
+}
+
+nav li
+{
+    list-style-type: none;
+    float: left;
+    padding: 0 10px;
+}
+nav a
+{
+    color:#fff;
+    padding-bottom: 5px;
+}
+nav li.current a, nav a:hover
+{
+    color: #03899c;
+    border-bottom: #03899c 3px solid;
+}
+section
+{
+    padding: 20px 0;
+    overflow: hidden;
+}
+.tagLine
+{
+    background: linear-gradient(to bottom right,#03899c, lightblue);
+    color:white;
+}
+.tagLine h1
+{
+    text-align: center;
+    font-size: 35px;
+}
+
+#gallery
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#gallery li
+{
+    display: block;
+    float: left;
+    width: 23%;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 12px 7px 0;
+    position: relative;
+}
+
+#gallery img
+{
+    width: 100%;
+    border-radius: 5px;
+}
+
+footer
+{
+    background: linear-gradient(to bottom left,lightblue,#03899c);
+    color: #fff;
+    padding-top: 8px;
+}
+
+.overlay
+{
+    display: none;
+    background: #03899c url(../Images/overlay.png) no-repeat top center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.overlay h3
+{
+    margin: 0;
+    padding: 0;
+}
+
+@media(max-width: 768px)
+{
+    .logo, nav
+    {
+        float: none;
+        width: 25%;
+        text-align: center;
+    }
+
+    nav ul, nav li
+    {
+        float: none;
+        padding: 0;
+    }
+
+    nav li 
+    {
+        margin-bottom: 15px;
+    }
+
+    #gallery li 
+    {
+        width: 48%;
+        margin-right: 8px;
+    }
+}
+
+@media(max-width: 568px)
+{
+     #gallery li 
+    {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/*=========================
+  Icons
+ ================= */
+
+/* footer social icons */
+ul.social-network 
+{
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li 
+{
+	display: inline;
+	margin: 0 5px;
+}
+
+/* footer social icons */
+.social-network a.icoFacebook:hover 
+{
+	background-color: #3b5998;
+}
+.social-network a.icoTwitter:hover 
+{
+	background-color:#33ccff;
+}
+.social-network a.icoGoogle:hover 
+{
+	background-color:#BD3518;
+}
+
+.social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, 
+{
+	color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass 
+{
+	color:#44BCDD;
+}
+
+.social-circle li a 
+{
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i 
+{
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover 
+{
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i 
+{
+	color: #fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
