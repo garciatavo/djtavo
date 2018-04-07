@@ -52,7 +52,14 @@ a
     margin:auto;
     overflow:auto;
 }
-.container h4
+
+@media and screen and (max-width:620px){
+  /* for Mobile phones: */
+  .container{
+    width: 100%;
+  }
+}
+iner h4
 {
     text-align: center;
 }
@@ -73,7 +80,7 @@ header a
     width: 5%;
     margin-top: 15px;
     border-radius: 50px;
-    
+
 }
 
 nav
@@ -188,12 +195,12 @@ footer
         padding: 0;
     }
 
-    nav li 
+    nav li
     {
         margin-bottom: 15px;
     }
 
-    #gallery li 
+    #gallery li
     {
         width: 48%;
         margin-right: 8px;
@@ -202,7 +209,7 @@ footer
 
 @media(max-width: 568px)
 {
-     #gallery li 
+     #gallery li
     {
         width: 100%;
         margin-right: 0;
@@ -214,44 +221,44 @@ footer
  ================= */
 
 /* footer social icons */
-ul.social-network 
+ul.social-network
 {
 	list-style: none;
 	display: inline;
 	margin-left:0 !important;
 	padding: 0;
 }
-ul.social-network li 
+ul.social-network li
 {
 	display: inline;
 	margin: 0 5px;
 }
 
 /* footer social icons */
-.social-network a.icoFacebook:hover 
+.social-network a.icoFacebook:hover
 {
 	background-color: #3b5998;
 }
-.social-network a.icoTwitter:hover 
+.social-network a.icoTwitter:hover
 {
 	background-color:#33ccff;
 }
-.social-network a.icoGoogle:hover 
+.social-network a.icoGoogle:hover
 {
 	background-color:#BD3518;
 }
 
 .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
-.social-network a.icoGoogle:hover i, 
+.social-network a.icoGoogle:hover i,
 {
 	color:#fff;
 }
-a.socialIcon:hover, .socialHoverClass 
+a.socialIcon:hover, .socialHoverClass
 {
 	color:#44BCDD;
 }
 
-.social-circle li a 
+.social-circle li a
 {
 	display:inline-block;
 	position:relative;
@@ -264,14 +271,14 @@ a.socialIcon:hover, .socialHoverClass
 	height: 50px;
 	font-size:20px;
 }
-.social-circle li i 
+.social-circle li i
 {
 	margin:0;
 	line-height:50px;
 	text-align: center;
 }
 
-.social-circle li a:hover i, .triggeredHover 
+.social-circle li a:hover i, .triggeredHover
 {
 	-moz-transform: rotate(360deg);
 	-webkit-transform: rotate(360deg);
@@ -283,7 +290,7 @@ a.socialIcon:hover, .socialHoverClass
 	-ms-transition: all 0.2s;
 	transition: all 0.2s;
 }
-.social-circle i 
+.social-circle i
 {
 	color: #fff;
 	-webkit-transition: all 0.8s;
