@@ -53,12 +53,6 @@ a
     overflow:auto;
 }
 
-@media and screen and (max-width:620px){
-  /* for Mobile phones: */
-  .container{
-    width: 100%;
-  }
-}
 iner h4
 {
     text-align: center;
