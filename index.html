@@ -43,11 +43,11 @@
               <!-- #Logo Ends -->
 
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
 
             </div>
 
@@ -81,18 +81,18 @@
           <div class="fronttext">
             <h2 class="bgcolor  animated fadeInUpBig"><span class="glyphicon glyphicon-headphones"></span> DJ Tavo</h2>
             <br>
-            <p class=" animated fadeInUp">A DJ can't just play one song. It's about playing a set, or how you connect songs in those hours, and where you place them.</p>
+            <p class="animated fadeInUp">A DJ can't just play one song. It's about playing a set, or how you connect songs in those hours, and where you place them.</p>
           </div>
         </div>
 
         <div class="col-sm-5 col-xs-12 col-sm-offset-1">
           <div class="player">
             <img src="images/dj.png" class="graphics hidden-xs  animated fadeInRightBig" alt="dj" />
-            <iframe width="100%" height="275" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/70560929&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true">
+            <iframe width="100%" height="275" scrolling="no" frameborder="no"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/70560929&amp;color=%23ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true">
             </iframe>
           </div>
         </div>
-
       </div>
     </div>
     <!-- home banner ends -->
@@ -108,9 +108,11 @@
             <img src="images/djtavo1.png" class="img-responsive" alt="about" />
           </div>
           <div class="col-lg-5 col-sm-8  col-xs-12">
-            <p>Born and rise in Cali-Colombia the world capital of SALSA. I've been Djing since 2000 I started when I was 18 years old working at a friend's bar. Since then i started promoting myselft moving up to big club in Philadelphia, New York and New
+            <p>Born and rise in Cali-Colombia the world capital of SALSA. I've been Djing since 2000 I started when I was 18 years old working at a friend's bar. Since then i started promoting myselft moving up to big club in Philadelphia, New York
+              and New
               Jersey I moved to Canada in 2008.Been djing in London, Hamilton, Kitchener &amp; Toronto since then.</p>
-            <blockquote>The best thing about being a DJ is making people happy. There is nothing like seeing people get up from a table to dance or the expression on their face when they hear a song they love. I also love to educate people on music they have never
+            <blockquote>The best thing about being a DJ is making people happy. There is nothing like seeing people get up from a table to dance or the expression on their face when they hear a song they love. I also love to educate people on music
+              they have never
               heard
             </blockquote>
           </div>
@@ -302,11 +304,9 @@
       <!--Blog Events Ends-->
 
       <!-- Comment Starts -->
-      <table>
+      <!-- <table>
 
         <tr>
-          <td>
-          </td>
           <td>
             Name:
           </td>
@@ -314,15 +314,11 @@
 
         <tr>
           <td>
-          </td>
-          <td>
-            <input type="text" id="name_entered"/>
+            <input type="text" id="name_entered" />
           </td>
         </tr>
 
         <tr>
-          <td>
-          </td>
           <td>
             Comment:
           </td>
@@ -330,68 +326,60 @@
 
         <tr>
           <td>
-          </td>
-          <td>
             <textarea cols="35" rows="6" id="comment_entered"></textarea>
           </td>
         </tr>
 
         <tr>
           <td>
-          </td>
-          <td>
-            <input type="submit" value="Comment" onclick="submitcomment();"/>
+            <input type="submit" value="Comment" onclick="submitcomment();" />
           </td>
         </tr>
 
-      </table>
+      </table> -->
 
       <br><br>
       <div id="showcomments"></div>
 
       <script>
-        function submitcomment(){
+        function submitcomment() {
           var request;
 
-          try{
-            request=new XMLHttpRequest();
-          }
-          catch (tryMicrosoft){
-            try{
-              request= new ActiveXObject("Microsoft.XMLHTTP");
-            }
-
-            catch(failed){
-              request= null;
+          try {
+            request = new XMLHttpRequest();
+          } catch (tryMicrosoft) {
+            try {
+              request = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (failed) {
+              request = null;
             }
           }
 
 
-        var webpage=location.href;
-        position= webpage.lastIndexOf("/");
-        var lastpart= webpage.substring(position + 1);
-        var period = lastpart.lastIndexOf(".");
-        var complete = lastpart.substring(0, period);
-        complete = complete.replace(/-/g, "_");
+          var webpage = location.href;
+          position = webpage.lastIndexOf("/");
+          var lastpart = webpage.substring(position + 1);
+          var period = lastpart.lastIndexOf(".");
+          var complete = lastpart.substring(0, period);
+          complete = complete.replace(/-/g, "_");
 
-        var url = "usercomments.php";
-        var username = document.getElementById("name_entered").value;
-        var usercomment = document.getElementById("comment_entered").value;
-        var vars = "name="+username+"&comment="+usercomment+"&webpage="+complete;
-        request.open("POST", url,true);
+          var url = "usercomments.php";
+          var username = document.getElementById("name_entered").value;
+          var usercomment = document.getElementById("comment_entered").value;
+          var vars = "name=" + username + "&comment=" + usercomment + "&webpage=" + complete;
+          request.open("POST", url, true);
 
-        request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+          request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-        request.onreadystatechange = function(){
-          if(request.readyState == 4 && request.status == 200){
-            var return_data = request.responseText;
-            document.getElementById("showcomments").innerHTML = return_data;
+          request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200) {
+              var return_data = request.responseText;
+              document.getElementById("showcomments").innerHTML = return_data;
+            }
           }
+
+          request.send(vars);
         }
-
-        request.send(vars);
-      }
-
       </script>
 
       <!-- comments End  -->
@@ -399,7 +387,7 @@
 
 
       <!--Contact Starts-->
-      <!-- <div id="contact" class="spacer">
+      <div id="contact" class="spacer">
         <div class="contactform center">
           <h3><span class="glyphicon glyphicon-envelope"></span> Contact</h3>
           <div class="row">
@@ -414,7 +402,7 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
       <!--Contact Ends-->
 
     </div>
@@ -426,7 +414,7 @@
   <!-- Footer Starts -->
   <div id="footer">
     <div class="container">
-      Copyright 2018 DjTavo
+      Copyright 2020 DjTavo
     </div>
   </div>
   <!-- # Footer Ends -->
